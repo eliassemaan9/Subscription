@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zVmQwbeV/uLiEIny5NPvKeyJEuMzv3WQuoaC+JmHsilYige8ui1rXDR60WQHKrQNAXYXCuvJMnmzybNPQgkDEw==",
+  "dgSpecHash": "61Wg+dXEtuh8PUFHt7rMeNB+ecXeD6cTNWzQd5SndbVF8sk5AypDsBLhcEBcVf01opzPZfWLtAtXxCN2FijKbQ==",
   "success": true,
-  "projectFilePath": "D:\\source\\subscriptionWEBAPI\\subscription.models\\subscription.models.csproj",
+  "projectFilePath": "D:\\source\\Subscription\\subscription.models\\subscription.models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

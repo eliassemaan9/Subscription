@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bc4V2ojBw+iiPWETuNNIugKxHZwkgqOqyVuIc/wqaMhT2LJGFKpP5XSzkJ2c29h5qczwchr26H/jo7mj4OwawA==",
+  "dgSpecHash": "g4q07lXwLsTyrB6xrCept/7vK8shTSWfdV7Nmjbr8v9Y9Y1OgGuYpxUh2vxHavMb67vs0aYaM0DLbp0EqwGarQ==",
   "success": true,
-  "projectFilePath": "D:\\source\\subscriptionWEBAPI\\subscription\\subscription.csproj",
+  "projectFilePath": "D:\\source\\Subscription\\subscription\\subscription.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.19\\microsoft.aspnetcore.authentication.jwtbearer.6.0.19.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

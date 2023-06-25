@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\subscriptionWEBAPI\\subscription.models\\subscription.models.csproj": {}
+    "D:\\source\\Subscription\\subscription.models\\subscription.models.csproj": {}
   },
   "projects": {
-    "D:\\source\\subscriptionWEBAPI\\subscription.models\\subscription.models.csproj": {
+    "D:\\source\\Subscription\\subscription.models\\subscription.models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\subscriptionWEBAPI\\subscription.models\\subscription.models.csproj",
+        "projectUniqueName": "D:\\source\\Subscription\\subscription.models\\subscription.models.csproj",
         "projectName": "subscription.models",
-        "projectPath": "D:\\source\\subscriptionWEBAPI\\subscription.models\\subscription.models.csproj",
+        "projectPath": "D:\\source\\Subscription\\subscription.models\\subscription.models.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\subscriptionWEBAPI\\subscription.models\\obj\\",
+        "outputPath": "D:\\source\\Subscription\\subscription.models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
