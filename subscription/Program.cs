@@ -90,7 +90,6 @@ app.UseRouting();
 app.UseAuth();
 app.UseAuthorization();
 app.UseCors("MyPolicy");
-
 app.MapControllers();
 
 app.Run();

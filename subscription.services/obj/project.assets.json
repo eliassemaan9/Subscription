@@ -63,11 +63,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\subscriptionWEBAPI\\subscription.services\\subscription.services.csproj",
+      "projectUniqueName": "D:\\source\\Subscription\\subscription.services\\subscription.services.csproj",
       "projectName": "subscription.services",
-      "projectPath": "D:\\source\\subscriptionWEBAPI\\subscription.services\\subscription.services.csproj",
+      "projectPath": "D:\\source\\Subscription\\subscription.services\\subscription.services.csproj",
       "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\subscriptionWEBAPI\\subscription.services\\obj\\",
+      "outputPath": "D:\\source\\Subscription\\subscription.services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

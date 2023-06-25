@@ -1,6 +1,7 @@
-﻿using subscription.models;
+﻿
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using subscription.models.Models;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;

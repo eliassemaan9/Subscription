@@ -10,3 +10,17 @@ D:\source\subscriptionWEBAPI\subscription.models\obj\Debug\net6.0\subscription.m
 D:\source\subscriptionWEBAPI\subscription.models\obj\Debug\net6.0\refint\subscription.models.dll
 D:\source\subscriptionWEBAPI\subscription.models\obj\Debug\net6.0\subscription.models.pdb
 D:\source\subscriptionWEBAPI\subscription.models\obj\Debug\net6.0\ref\subscription.models.dll
+D:\source\Subscription\subscription.models\bin\Debug\net6.0\subscription.models.deps.json
+D:\source\Subscription\subscription.models\bin\Debug\net6.0\subscription.models.runtimeconfig.json
+D:\source\Subscription\subscription.models\bin\Debug\net6.0\subscription.models.dll
+D:\source\Subscription\subscription.models\bin\Debug\net6.0\subscription.models.pdb
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\subscription.models.csproj.AssemblyReference.cache
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\subscription.models.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\subscription.models.AssemblyInfoInputs.cache
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\subscription.models.AssemblyInfo.cs
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\subscription.models.csproj.CoreCompileInputs.cache
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\subscription.models.dll
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\refint\subscription.models.dll
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\subscription.models.pdb
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\subscription.models.genruntimeconfig.cache
+D:\source\Subscription\subscription.models\obj\Debug\net6.0\ref\subscription.models.dll
