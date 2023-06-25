@@ -12,7 +12,11 @@
 
   <ItemGroup>
     <Folder Include="IServices\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\subscription.models\subscription.models.csproj" />
+    <ProjectReference Include="..\subscription.repositories\subscription.repositories.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace subscription.models.Models;
@@ -14,7 +13,7 @@ public partial class DiscountDetail
 
     public long? RedeemedCount { get; set; }
 
-    public BitArray Status { get; set; }
+    public short? Status { get; set; }
 
     public long? RedemtionsLimit { get; set; }
 

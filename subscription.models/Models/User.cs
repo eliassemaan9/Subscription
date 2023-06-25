@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace subscription.models.Models;
@@ -20,17 +19,19 @@ public partial class User
 
     public string NormalizedEmail { get; set; }
 
-    public BitArray EmailConfirmed { get; set; }
+    public short EmailConfirmed { get; set; }
 
     public string PasswordHash { get; set; }
 
     public string PhoneNumber { get; set; }
 
-    public BitArray PhoneNumberConfirmed { get; set; }
+    public short? PhoneNumberConfirmed { get; set; }
 
-    public BitArray IsActive { get; set; }
+    public short? IsActive { get; set; }
 
-    public BitArray IsDeleted { get; set; }
+    public short? IsDeleted { get; set; }
+
+    public string Salt { get; set; }
 
     public virtual ICollection<Address> Addresses { get; set; } = new List<Address>();
 

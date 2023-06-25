@@ -196,7 +196,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\source\\Subscription\\subscription.models\\subscription.models.csproj": {
+                "projectPath": "D:\\source\\Subscription\\subscription.models\\subscription.models.csproj"
+              },
+              "D:\\source\\Subscription\\subscription.repositories\\subscription.repositories.csproj": {
+                "projectPath": "D:\\source\\Subscription\\subscription.repositories\\subscription.repositories.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

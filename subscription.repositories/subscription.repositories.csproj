@@ -18,11 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IRepositories\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\subscription.models\subscription.models.csproj" />
   </ItemGroup>
 

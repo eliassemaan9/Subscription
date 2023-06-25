@@ -80,7 +80,6 @@ public partial class SubscriptionContext : DbContext
 
             entity.Property(e => e.Id).UseIdentityAlwaysColumn();
             entity.Property(e => e.RedeemDate).HasColumnType("timestamp without time zone");
-            entity.Property(e => e.Status).HasColumnType("bit(1)");
 
             entity.HasOne(d => d.Discount).WithMany(p => p.DiscountDetails)
                 .HasForeignKey(d => d.DiscountId)
@@ -142,18 +141,13 @@ public partial class SubscriptionContext : DbContext
 
             entity.Property(e => e.Id).UseIdentityAlwaysColumn();
             entity.Property(e => e.Email).HasMaxLength(256);
-            entity.Property(e => e.EmailConfirmed)
-                .IsRequired()
-                .HasColumnType("bit(1)");
             entity.Property(e => e.FirstName).HasMaxLength(256);
-            entity.Property(e => e.IsActive).HasColumnType("bit(1)");
-            entity.Property(e => e.IsDeleted).HasColumnType("bit(1)");
             entity.Property(e => e.LastName).HasMaxLength(256);
             entity.Property(e => e.NormalizedEmail).HasMaxLength(256);
             entity.Property(e => e.NormalizedUserName).HasMaxLength(256);
             entity.Property(e => e.PasswordHash).HasMaxLength(256);
             entity.Property(e => e.PhoneNumber).HasMaxLength(256);
-            entity.Property(e => e.PhoneNumberConfirmed).HasColumnType("bit(1)");
+            entity.Property(e => e.Salt).HasMaxLength(100);
             entity.Property(e => e.UserName).HasMaxLength(256);
         });
 

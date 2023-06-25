@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using subscription.services.IServices;
+using subscription.services.Services;
 
 namespace subscription.services
 {
@@ -6,6 +8,7 @@ namespace subscription.services
     {
         public static IServiceCollection AddService(this IServiceCollection services)
         {
+            services.AddTransient<IBasicService, BasicService>();
             return services;
         }
     }

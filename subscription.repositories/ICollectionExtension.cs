@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using subscription.repositories.Helper;
+using subscription.repositories.IRepositories;
+using subscription.repositories.Repositories;
 
 namespace subscription.repositories
 {
@@ -8,6 +10,7 @@ namespace subscription.repositories
         public static IServiceCollection  AddServiceRepositories(this IServiceCollection services)
         {
             services.AddTransient<IHelper,Helpers>();
+            services.AddTransient<IBasicRepository, BasicRepository>();
             return services;
         }
     }

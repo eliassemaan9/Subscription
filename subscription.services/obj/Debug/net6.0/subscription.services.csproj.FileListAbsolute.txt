@@ -22,3 +22,8 @@ D:\source\Subscription\subscription.services\obj\Debug\net6.0\subscription.servi
 D:\source\Subscription\subscription.services\obj\Debug\net6.0\refint\subscription.services.dll
 D:\source\Subscription\subscription.services\obj\Debug\net6.0\subscription.services.pdb
 D:\source\Subscription\subscription.services\obj\Debug\net6.0\ref\subscription.services.dll
+D:\source\Subscription\subscription.services\bin\Debug\net6.0\subscription.models.dll
+D:\source\Subscription\subscription.services\bin\Debug\net6.0\subscription.repositories.dll
+D:\source\Subscription\subscription.services\bin\Debug\net6.0\subscription.models.pdb
+D:\source\Subscription\subscription.services\bin\Debug\net6.0\subscription.repositories.pdb
+D:\source\Subscription\subscription.services\obj\Debug\net6.0\subscription.services.csproj.CopyComplete

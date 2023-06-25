@@ -5,11 +5,16 @@ using subscription.Extension;
 using System.Text;
 using subscription.repositories;
 using subscription.services;
+using subscription.models.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 IConfiguration Configuration = builder.Configuration;
+string ConnectionStrings = Configuration.GetConnectionString("Default");
+builder.Services.AddDbContext<SubscriptionContext>(options => options.UseNpgsql(ConnectionStrings));
+
 builder.Services.AddControllers();
 builder.Services.AddServiceRepositories();
 builder.Services.AddService();
@@ -32,15 +37,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 });
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "InsuranceApi", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "SubscriptionApi", Version = "v1" });
 
 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Description = "JWT containing userid claim",
+        Description = "JWT claim",
         Name = "Authorization",
         In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey,
+        Type = SecuritySchemeType.Http,
     });
 
     var security =
