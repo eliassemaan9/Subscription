@@ -1,0 +1,15 @@
+D:\source\subscriptionWEBAPI\subscription.repositories\bin\Debug\net6.0\subscription.repositories.deps.json
+D:\source\subscriptionWEBAPI\subscription.repositories\bin\Debug\net6.0\subscription.repositories.dll
+D:\source\subscriptionWEBAPI\subscription.repositories\bin\Debug\net6.0\subscription.repositories.pdb
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\subscription.repositories.csproj.AssemblyReference.cache
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\subscription.repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\subscription.repositories.AssemblyInfoInputs.cache
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\subscription.repositories.AssemblyInfo.cs
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\subscription.repositories.csproj.CoreCompileInputs.cache
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\subscription.repositories.dll
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\refint\subscription.repositories.dll
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\subscription.repositories.pdb
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\ref\subscription.repositories.dll
+D:\source\subscriptionWEBAPI\subscription.repositories\bin\Debug\net6.0\subscription.models.dll
+D:\source\subscriptionWEBAPI\subscription.repositories\bin\Debug\net6.0\subscription.models.pdb
+D:\source\subscriptionWEBAPI\subscription.repositories\obj\Debug\net6.0\subscription.repositories.csproj.CopyComplete

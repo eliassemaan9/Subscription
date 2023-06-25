@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HoYz0o666A2eV/sHLqT0uwEHbblrZ7te1kTEwX3J/QQvY/3udVSZeZDPiICmbwx/BOrdOfSZ3d3yeTCQsJfmZw==",
+  "success": true,
+  "projectFilePath": "D:\\source\\subscriptionWEBAPI\\subscription.services\\subscription.services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
