@@ -22,5 +22,9 @@ namespace subscription.services.Services
         {
             return _basicRepository.register(registerDTO);  
         }
+        public LoginResponse login(LoginDTO loginDTO)
+        {
+            return _basicRepository.login(loginDTO);
+        }
     }
 }

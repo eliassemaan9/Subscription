@@ -10,7 +10,7 @@ WORKDIR /src
 COPY subscription.repositories/*.csproj ./subscription.repositories/
 COPY subscription.models/*.csproj ./subscription.models/
 COPY subscription.services/*.csproj ./subscription.services/
-COPY ["subscription.csproj", "."]
+COPY subscription/*.csproj ./subscription/
 RUN dotnet restore 
 
 COPY . .

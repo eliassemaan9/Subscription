@@ -7,6 +7,8 @@ using subscription.repositories;
 using subscription.services;
 using subscription.models.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Hosting;
+using System.Security.Principal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,39 +37,34 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 
 });
-builder.Services.AddSwaggerGen(c =>
+builder.Services.AddSwaggerGen(setup =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "SubscriptionApi", Version = "v1" });
-
-
-    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    setup.SwaggerDoc("v1", new OpenApiInfo { Title = "SubscriptionApi", Version = "v1" });
+    var xmlFile = Path.ChangeExtension(typeof(Program).Assembly.Location, ".xml");
+    setup.IncludeXmlComments(xmlFile);
+    // Include 'SecurityScheme' to use JWT Authentication
+    var jwtSecurityScheme = new OpenApiSecurityScheme
     {
-        Description = "JWT claim",
-        Name = "Authorization",
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        Name = "JWT Authentication",
         In = ParameterLocation.Header,
-        Type = SecuritySchemeType.Http,
-    });
+        Type = SecuritySchemeType.ApiKey,
+        Description = "Put **_ONLY_** your JWT Bearer token on textbox below!",
 
-    var security =
-        new OpenApiSecurityRequirement
+        Reference = new OpenApiReference
         {
-                        {
-                            new OpenApiSecurityScheme
-                            {
-                                Reference = new OpenApiReference
-                                {
-                                    Id = "Bearer",
-                                    Type = ReferenceType.SecurityScheme
-                                },
-                                UnresolvedReference = true
-                            },
-                            new List<string>()
-                        }
-        };
-    c.AddSecurityRequirement(security);
+            Id = "Bearer",
+            Type = ReferenceType.SecurityScheme
+        }
+    };
 
+    setup.AddSecurityDefinition(jwtSecurityScheme.Reference.Id, jwtSecurityScheme);
 
-
+    setup.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+                { jwtSecurityScheme, Array.Empty<string>() }
+            });
 
 });
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
@@ -88,6 +85,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
 }
 
 app.UseHttpsRedirection();

@@ -1,0 +1,25 @@
+version: '2.18.1'
+services:
+  
+    db:
+      image: postgres 
+      volumes:      
+       - postgres_data:/var/lib/postgresql/data
+      environment:
+       - POSTGRES_USER=postgres
+       - POSTGRES_PASSWORD=P@ssw0rd
+       - POSTGRES_DB=subscription
+      expose:
+       - "5455"
+      networks:
+        services-network:
+          aliases:
+            - db
+
+volumes:  
+ postgres_data:
+
+networks:
+  services-network:
+    name: services-network
+    driver: bridge

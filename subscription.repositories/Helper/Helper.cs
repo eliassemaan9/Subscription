@@ -111,7 +111,7 @@ namespace subscription.repositories.Helper
         {
             byte[] iv = new byte[16];
             byte[] array;
-            string key = "asfhfieh389302u";
+            string key = "b14ca5898a4e4133bbce2ea2315a1916";
             using (Aes aes = Aes.Create())
             {
                 aes.Key = Encoding.UTF8.GetBytes(key);
@@ -158,6 +158,16 @@ namespace subscription.repositories.Helper
                     }
                 }
             }
+        }
+
+        public bool CheckIfEmail(string email)
+        {
+            email = email.Trim();
+            if(email.IndexOf('@') > 1 && email.IndexOf('.') > 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -11,5 +11,6 @@ namespace subscription.services.IServices
     public interface IBasicService
     {
         LoginResponse register(RegisterDTO registerDTO);
+        LoginResponse login(LoginDTO loginDTO);
     }
 }

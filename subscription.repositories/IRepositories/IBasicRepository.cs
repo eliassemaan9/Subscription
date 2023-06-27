@@ -11,5 +11,6 @@ namespace subscription.repositories.IRepositories
     public interface IBasicRepository
     {
         LoginResponse register(RegisterDTO registerDTO);
+        LoginResponse login(LoginDTO loginDTO);
     }
 }

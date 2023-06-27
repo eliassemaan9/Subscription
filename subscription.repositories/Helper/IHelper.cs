@@ -15,5 +15,6 @@ namespace subscription.repositories.Helper
         string DecryptString(string cipherText);
         string GenerateSalt(int length);
         string HashStringHMACSHA512(string StringToHash, string saltValue = "");
+        bool CheckIfEmail(string email);
     }
 }

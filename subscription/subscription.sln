@@ -13,13 +13,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "subscription.repositories",
 		{3C11267A-13AA-4DBF-B6E3-21DD8B86F027} = {3C11267A-13AA-4DBF-B6E3-21DD8B86F027}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "subscription.services", "..\subscription.services\subscription.services.csproj", "{E3E898C7-7AA1-456C-818A-CC8E0528E5D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "subscription.services", "..\subscription.services\subscription.services.csproj", "{E3E898C7-7AA1-456C-818A-CC8E0528E5D4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2D900F20-C6E9-41CB-B47B-4853FA009F2D} = {2D900F20-C6E9-41CB-B47B-4853FA009F2D}
 		{3C11267A-13AA-4DBF-B6E3-21DD8B86F027} = {3C11267A-13AA-4DBF-B6E3-21DD8B86F027}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "subscription.models", "..\subscription.models\subscription.models.csproj", "{3C11267A-13AA-4DBF-B6E3-21DD8B86F027}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "subscription.models", "..\subscription.models\subscription.models.csproj", "{3C11267A-13AA-4DBF-B6E3-21DD8B86F027}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05C314EC-260A-4AB3-A56B-8D07D12FA700}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
