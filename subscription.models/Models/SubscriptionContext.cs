@@ -25,6 +25,10 @@ public partial class SubscriptionContext : DbContext
 
     public virtual DbSet<Price> Prices { get; set; }
 
+    public virtual DbSet<Product> Products { get; set; }
+
+    public virtual DbSet<Session> Sessions { get; set; }
+
     public virtual DbSet<Subscription> Subscriptions { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
@@ -59,9 +63,7 @@ public partial class SubscriptionContext : DbContext
             entity.ToTable("Discount", "subscription");
 
             entity.Property(e => e.Id).UseIdentityAlwaysColumn();
-            entity.Property(e => e.EndDate).HasColumnType("timestamp without time zone");
             entity.Property(e => e.PromotionCode).HasColumnType("character varying");
-            entity.Property(e => e.StartDate).HasColumnType("timestamp without time zone");
 
             entity.HasOne(d => d.Subscription).WithMany(p => p.Discounts)
                 .HasForeignKey(d => d.SubscriptionId)
@@ -79,7 +81,6 @@ public partial class SubscriptionContext : DbContext
             entity.ToTable("DiscountDetails", "subscription");
 
             entity.Property(e => e.Id).UseIdentityAlwaysColumn();
-            entity.Property(e => e.RedeemDate).HasColumnType("timestamp without time zone");
 
             entity.HasOne(d => d.Discount).WithMany(p => p.DiscountDetails)
                 .HasForeignKey(d => d.DiscountId)
@@ -114,6 +115,31 @@ public partial class SubscriptionContext : DbContext
                 .HasConstraintName("price_fk");
         });
 
+        modelBuilder.Entity<Product>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("product_pk");
+
+            entity.ToTable("Product", "subscription");
+
+            entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+            entity.Property(e => e.Name).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<Session>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("session_pk");
+
+            entity.ToTable("Session", "subscription");
+
+            entity.Property(e => e.Id).UseIdentityAlwaysColumn();
+            entity.Property(e => e.AccessToken).HasMaxLength(1000);
+            entity.Property(e => e.LogoutTime).HasColumnName("logoutTime");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Sessions)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("session_fk");
+        });
+
         modelBuilder.Entity<Subscription>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("Subscription_pkey");
@@ -121,12 +147,11 @@ public partial class SubscriptionContext : DbContext
             entity.ToTable("Subscription", "subscription");
 
             entity.Property(e => e.Id).UseIdentityAlwaysColumn();
-            entity.Property(e => e.CancelAt).HasColumnType("timestamp without time zone");
-            entity.Property(e => e.CanceledAt).HasColumnType("timestamp without time zone");
-            entity.Property(e => e.EndDate).HasColumnType("timestamp without time zone");
-            entity.Property(e => e.EndedAt).HasColumnType("timestamp without time zone");
             entity.Property(e => e.Name).HasMaxLength(100);
-            entity.Property(e => e.StartDate).HasColumnType("timestamp without time zone");
+
+            entity.HasOne(d => d.Product).WithMany(p => p.Subscriptions)
+                .HasForeignKey(d => d.ProductId)
+                .HasConstraintName("subscription_product_fk");
 
             entity.HasOne(d => d.User).WithMany(p => p.Subscriptions)
                 .HasForeignKey(d => d.UserId)

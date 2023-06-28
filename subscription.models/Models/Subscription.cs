@@ -23,9 +23,13 @@ public partial class Subscription
 
     public DateTime? EndedAt { get; set; }
 
+    public long? ProductId { get; set; }
+
     public virtual ICollection<Discount> Discounts { get; set; } = new List<Discount>();
 
     public virtual ICollection<Price> Prices { get; set; } = new List<Price>();
+
+    public virtual Product Product { get; set; }
 
     public virtual User User { get; set; }
 }

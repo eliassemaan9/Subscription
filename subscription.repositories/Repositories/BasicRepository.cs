@@ -3,6 +3,7 @@ using subscription.models.DTO.View;
 using subscription.models.Models;
 using subscription.repositories.Helper;
 using subscription.repositories.IRepositories;
+using subscription.repositories.Log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,13 @@ namespace subscription.repositories.Repositories
     public class BasicRepository : IBasicRepository
     {
         private SubscriptionContext _context;
-
+        private ILog4net _log4Net;
         private IHelper _helper;
-        public BasicRepository(SubscriptionContext context, IHelper helper)
+        public BasicRepository(SubscriptionContext context, IHelper helper,ILog4net log4Net)
         {
             _context = context;
             _helper = helper;
+            _log4Net = log4Net;
         }
 
         public LoginResponse register(RegisterDTO registerDTO) 
@@ -70,6 +72,9 @@ namespace subscription.repositories.Repositories
 
         public LoginResponse login(LoginDTO loginDTO)
         {
+
+            //////////////logging/////////////
+            _log4Net.Info("HELLO");
             LoginResponse loginResponse = new LoginResponse();
             var email = _helper.EncryptString(loginDTO.Login.ToLower()).ToLower();
 
@@ -89,6 +94,13 @@ namespace subscription.repositories.Repositories
             loginResponse.userId = user.Id;
             loginResponse.accessToken = accessToken;
 
+            Session sessions = new Session();
+            sessions.UserId = user.Id;
+            sessions.AccessToken = _helper.EncryptString(accessToken);
+            sessions.LoginTime = DateTime.Now;
+            sessions.LogoutTime = null;
+            _context.Sessions.Add(sessions);
+            _context.SaveChanges();
             return loginResponse;
         }
     }

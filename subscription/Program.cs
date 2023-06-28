@@ -15,8 +15,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 IConfiguration Configuration = builder.Configuration;
 string ConnectionStrings = Configuration.GetConnectionString("Default");
-builder.Services.AddDbContext<SubscriptionContext>(options => options.UseNpgsql(ConnectionStrings));
-
+//builder.Services.AddDbContext<SubscriptionContext>(options => options.UseNpgsql(ConnectionStrings));
+builder.Services.AddEntityFrameworkNpgsql().AddDbContext<SubscriptionContext>(options =>
+  options.UseNpgsql(Configuration.GetConnectionString("Default")));
 builder.Services.AddControllers();
 builder.Services.AddServiceRepositories();
 builder.Services.AddService();

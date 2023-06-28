@@ -166,3 +166,5 @@ D:\source\Subscription\subscription\obj\Debug\net6.0\subscription.xml
 D:\source\Subscription\subscription\obj\Debug\net6.0\subscription.pdb
 D:\source\Subscription\subscription\obj\Debug\net6.0\subscription.genruntimeconfig.cache
 D:\source\Subscription\subscription\obj\Debug\net6.0\ref\subscription.dll
+D:\source\Subscription\subscription\bin\Debug\net6.0\AutoMapper.dll
+D:\source\Subscription\subscription\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

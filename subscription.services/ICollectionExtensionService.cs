@@ -9,6 +9,8 @@ namespace subscription.services
         public static IServiceCollection AddService(this IServiceCollection services)
         {
             services.AddTransient<IBasicService, BasicService>();
+            services.AddTransient<ISubscriptionService, SubscriptionService>();
+            services.AddAutoMapper(typeof(ICollectionExtensionService));
             return services;
         }
     }
